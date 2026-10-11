@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lava Brew — Kopi & Lava Toast</title>
+<meta name="description" content="Temukan kopi favorit dan lava toast hangat di Lava Brew. Pesan mudah melalui WhatsApp.">
+<style>
+:root{--cream:#f7f1e7;--paper:#fffdf8;--ink:#2d211b;--muted:#77685d;--coffee:#70462f;--caramel:#c98d52;--sage:#69765a;--line:#e8ddcf}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(247,241,231,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(112,70,47,.12)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-family:Georgia,serif;font-size:25px;font-weight:bold;letter-spacing:-.7px}.brand span{color:var(--caramel)}.navlinks{display:flex;gap:28px;font-size:14px;color:var(--muted)}.navlinks a:hover{color:var(--coffee)}.nav-cta,.btn{border:0;background:var(--coffee);color:white;padding:12px 19px;border-radius:999px;font-weight:650;font-size:14px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:.2s}.nav-cta:hover,.btn:hover{background:#4f3021;transform:translateY(-1px)}.btn.secondary{background:transparent;color:var(--coffee);border:1px solid #bca28b}.btn.secondary:hover{background:#efe3d4}
+.hero{padding:65px 0 70px}.hero-grid{display:grid;grid-template-columns:1.04fr .96fr;align-items:center;gap:55px}.eyebrow{display:inline-flex;align-items:center;gap:8px;text-transform:uppercase;letter-spacing:2px;font-size:11px;font-weight:800;color:var(--sage)}.eyebrow:before{content:"";width:25px;height:1px;background:var(--sage)}h1,h2,h3,p{margin-top:0}h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(44px,6vw,76px);line-height:1.03;letter-spacing:-2.8px;font-weight:500;margin:20px 0}.hero h1 em{color:var(--coffee);font-weight:500}.hero-copy{max-width:475px;color:var(--muted);font-size:16px;margin-bottom:28px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.tiny-note{font-size:12px;color:var(--muted);margin-top:19px}.hero-art{position:relative;min-height:440px;border-radius:48% 48% 18px 18px;background:#e8d6bd;overflow:hidden;display:flex;align-items:center;justify-content:center}.hero-art:before{content:"";position:absolute;width:310px;height:310px;border:1px solid rgba(112,70,47,.25);border-radius:50%}.sun{position:absolute;width:190px;height:190px;border-radius:50%;background:#d5a16b;top:35px;right:42px;opacity:.7}.cup{position:relative;width:230px;height:245px;margin-top:55px;background:linear-gradient(100deg,#fff8eb,#d9c5a9);border-radius:20px 20px 65px 65px;box-shadow:18px 25px 35px #70462f2b;transform:rotate(-7deg);z-index:1}.cup:before{content:"";position:absolute;left:-34px;top:44px;width:55px;height:82px;border:15px solid #e4d3ba;border-right:0;border-radius:48px 0 0 48px}.cup:after{content:"LAVA\\A BREW";white-space:pre;position:absolute;top:100px;left:0;right:0;text-align:center;font-family:Georgia,serif;line-height:1.5;font-size:20px;letter-spacing:2px;color:var(--coffee)}.foam{position:absolute;top:-13px;left:-4px;right:-4px;height:50px;border-radius:50%;background:radial-gradient(ellipse at 35% 25%,#fffdf3 0 20%,#e9d6bb 70%);border:5px solid #f7eddd}.bean{position:absolute;width:26px;height:43px;border-radius:50%;background:#71462f;transform:rotate(28deg);z-index:2}.bean:after{content:"";position:absolute;left:12px;top:3px;width:2px;height:36px;background:#c99a70;border-radius:50%}.bean.one{bottom:72px;left:45px}.bean.two{bottom:115px;right:49px;transform:rotate(-28deg) scale(.7)}.art-label{position:absolute;bottom:24px;left:26px;background:var(--paper);border-radius:14px;padding:12px 16px;box-shadow:0 10px 30px #70462f12;font-size:12px;z-index:3}.art-label strong{display:block;font-family:Georgia,serif;font-size:18px;font-weight:500}
+.strip{background:var(--coffee);color:#f8eee1;padding:17px 0}.strip-inner{display:flex;justify-content:space-around;gap:20px;flex-wrap:wrap;font-size:13px;letter-spacing:.3px}.strip span{display:flex;align-items:center;gap:9px}.strip b{color:#e7b987;font-size:17px}
+section{padding:78px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:30px}.section-head h2{font-family:Georgia,serif;font-size:clamp(32px,4vw,46px);font-weight:500;letter-spacing:-1.2px;margin:8px 0 0}.section-head p{max-width:390px;color:var(--muted);font-size:14px;margin-bottom:3px}.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.product{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.2s}.product:hover{transform:translateY(-4px);box-shadow:0 16px 35px #52321a0c}.product-art{height:215px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.product-art.dalgona{background:#e9d7c2}.product-art.americano{background:#d6dfd0}.product-art.toast{background:#f0d7ad}.drink{width:105px;height:125px;position:relative;border-radius:12px 12px 26px 26px;border:5px solid #fff5e6;background:linear-gradient(to bottom,#f1dfc2 0 35%,#ad7951 36% 100%);box-shadow:10px 15px 22px #39271b25;transform:rotate(-5deg)}.drink:before{content:"";position:absolute;left:-8px;right:-8px;top:-8px;height:20px;border-radius:50%;background:#fff4dc;border:4px solid #fff8ee}.dalgona .drink{background:linear-gradient(to bottom,#c99a6a 0 30%,#f3e5cf 31% 55%,#a66e43 56%)}.americano .drink{background:linear-gradient(to bottom,#51321f,#9b633c)}.product-art .spark{position:absolute;font-size:30px;color:#fffaf0;opacity:.8}.spark.s1{top:30px;left:35px}.spark.s2{right:40px;bottom:36px;font-size:20px}.toast-plate{width:180px;height:105px;border-radius:50%;background:#fff6e8;box-shadow:0 15px 22px #68421e22;display:flex;align-items:center;justify-content:center;transform:rotate(-8deg)}.toast-piece{width:100px;height:72px;background:linear-gradient(135deg,#e6b35d,#f6d38c 45%,#c47b35);border:5px solid #d39a4c;border-radius:12px;box-shadow:inset 0 0 0 4px #f7dfaa;position:relative}.toast-piece:after{content:"";position:absolute;inset:22px 20px;background:#5b2b19;border-radius:50%;box-shadow:0 0 12px #5b2b19}.product-body{padding:20px}.product-top{display:flex;justify-content:space-between;gap:10px;align-items:start}.product h3{font-family:Georgia,serif;font-size:23px;font-weight:500;margin:0 0 5px}.price{font-weight:800;color:var(--coffee);white-space:nowrap}.product p{font-size:13px;color:var(--muted);min-height:42px;margin:8px 0 18px}.add-row{display:flex;gap:10px;align-items:center}.qty{display:flex;align-items:center;border:1px solid var(--line);border-radius:999px;overflow:hidden;height:39px}.qty button{width:34px;height:37px;border:0;background:transparent;color:var(--coffee);font-size:19px;cursor:pointer}.qty output{min-width:20px;text-align:center;font-size:13px;font-weight:700}.add-btn{flex:1;border:1px solid #d8c4ad;background:transparent;color:var(--coffee);border-radius:999px;height:39px;font-size:13px;font-weight:750;cursor:pointer}.add-btn:hover{background:#f1e6d8}
+.about{background:#eee3d4}.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:55px;align-items:center}.about-card{background:var(--sage);color:#fff8ee;border-radius:22px;padding:32px;min-height:270px;display:flex;flex-direction:column;justify-content:space-between}.about-card .quote{font-family:Georgia,serif;font-size:31px;line-height:1.2}.about-card small{opacity:.8}.about-copy h2{font-family:Georgia,serif;font-weight:500;font-size:42px;line-height:1.12;letter-spacing:-1px}.about-copy p{color:var(--muted);font-size:15px}.perks{display:flex;gap:22px;flex-wrap:wrap;margin-top:22px}.perk{font-size:13px;font-weight:700}.perk span{color:var(--sage);margin-right:7px}
+.order-section{background:var(--paper)}.order-layout{display:grid;grid-template-columns:1fr .9fr;gap:35px;align-items:start}.order-intro{padding-top:10px}.order-intro h2{font-family:Georgia,serif;font-size:44px;font-weight:500;line-height:1.1}.order-intro p{color:var(--muted);max-width:430px}.steps{margin-top:25px;display:grid;gap:15px}.step{display:flex;gap:13px;align-items:center;font-size:14px}.step-num{display:grid;place-items:center;width:32px;height:32px;flex:none;border-radius:50%;background:#efe3d4;color:var(--coffee);font-weight:800}.order-box{background:var(--cream);border:1px solid var(--line);padding:25px;border-radius:20px}.order-box h3{font-family:Georgia,serif;font-size:25px;font-weight:500;margin-bottom:18px}.field{display:grid;gap:6px;margin-bottom:14px}.field label{font-size:12px;font-weight:800;color:#5b483b}.field input,.field textarea,.field select{width:100%;border:1px solid #dfd0bf;background:#fffdf9;border-radius:10px;padding:12px 13px;outline:none;color:var(--ink)}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--caramel);box-shadow:0 0 0 3px #c98d5220}.field textarea{min-height:76px;resize:vertical}.order-menu-list{display:grid;gap:8px;margin:10px 0 16px}.order-menu-item{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px;background:#fffdf9;border:1px solid var(--line);border-radius:10px}.order-menu-item label{font-size:13px;font-weight:700}.order-menu-item small{display:block;color:var(--muted);font-weight:500}.order-menu-item input{width:66px;padding:8px;border:1px solid #dfd0bf;background:white;border-radius:8px;color:var(--ink)}.cart-list{display:grid;gap:8px;margin:10px 0 16px}.cart-empty{color:var(--muted);font-size:13px;padding:13px;border:1px dashed #d8c4ad;border-radius:10px}.cart-item{display:flex;justify-content:space-between;gap:10px;font-size:13px;padding:8px 0;border-bottom:1px solid var(--line)}.cart-item button{border:0;background:transparent;color:#9b5b3c;cursor:pointer}.total{display:flex;justify-content:space-between;font-weight:800;padding:14px 0;border-top:1px solid #d9c9b8;margin-top:10px}.submit{width:100%;padding:14px}.smallprint{font-size:11px;color:var(--muted);text-align:center;margin:12px 0 0}
+footer{background:#2d211b;color:#f8eee1;padding:32px 0}.footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}.footer-brand{font-family:Georgia,serif;font-size:23px}.footer-brand span{color:#d6a16c}.footer-inner p{font-size:12px;color:#cbb9a9;margin:4px 0 0}.footer-link{font-size:13px;color:#f0d3b3}
+.toast-msg{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:#2d211b;color:white;padding:11px 18px;border-radius:999px;font-size:13px;box-shadow:0 10px 30px #0002;opacity:0;pointer-events:none;transition:.25s;z-index:30}.toast-msg.show{opacity:1}
+@media(max-width:800px){.navlinks{display:none}.hero{padding-top:38px}.hero-grid,.about-grid,.order-layout{grid-template-columns:1fr}.hero-grid{gap:35px}.hero-art{min-height:360px}.menu-grid{grid-template-columns:1fr 1fr}.about-grid{gap:25px}.section-head{align-items:start;flex-direction:column;gap:10px}.order-intro h2{font-size:38px}}
+@media(max-width:520px){.wrap{width:min(100% - 28px,1120px)}.nav{height:66px}.brand{font-size:22px}.nav-cta{padding:10px 13px;font-size:12px}.hero h1{font-size:49px}.hero-art{min-height:320px}.cup{transform:scale(.85) rotate(-7deg);margin-top:45px}.menu-grid{grid-template-columns:1fr}.product-art{height:195px}section{padding:58px 0}.strip-inner{justify-content:flex-start;padding-left:8px}.about-copy h2{font-size:36px}.order-box{padding:18px}.footer-inner{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home">lava<span>.</span>brew</a>
+    <nav class="navlinks" aria-label="Navigasi utama"><a href="#menu">Menu</a><a href="#cerita">Cerita kami</a><a href="#pesan">Cara pesan</a></nav>
+    <a class="nav-cta" href="#pesan">Pesan sekarang <span>↗</span></a>
+  </div>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Kopi kecil, mood besar</div>
+      <h1>Temukan jeda<br>di setiap <em>tegukan.</em></h1>
+      <p class="hero-copy">Dari kopi creamy yang lembut sampai toast hangat dengan isian lumer. Teman sederhana untuk menemani hari kamu.</p>
+      <div class="hero-actions"><a class="btn" href="#menu">Jelajahi menu <span>↓</span></a><a class="btn secondary" href="#pesan">Pesan via WhatsApp</a></div>
+      <p class="tiny-note">Dibuat fresh saat dipesan · Cocok buat nemenin kerja, belajar, atau santai.</p>
+    </div>
+    <div class="hero-art" aria-label="Ilustrasi gelas kopi Lava Brew">
+      <div class="sun"></div><div class="bean one"></div><div class="bean two"></div>
+      <div class="cup"><div class="foam"></div></div>
+      <div class="art-label"><strong>Slow down, sip up.</strong>Secangkir waktu untuk diri sendiri.</div>
+    </div>
+  </div>
+</section>
+<div class="strip"><div class="wrap strip-inner"><span><b>✳</b> Bahan pilihan</span><span><b>✳</b> Dibuat saat dipesan</span><span><b>✳</b> Order praktis via WhatsApp</span></div></div>
+<section id="menu">
+  <div class="wrap">
+    <div class="section-head"><div><div class="eyebrow">Pilihan favorit</div><h2>Menu yang bikin balik lagi.</h2></div><p>Temukan teman ngopi kamu hari ini. Lihat menu favorit, lalu tentukan jumlahnya di formulir pemesanan.</p></div>
+    <div class="menu-grid">
+      <article class="product">
+        <div class="product-art dalgona"><span class="spark s1">✳</span><div class="drink"></div><span class="spark s2">✦</span></div>
+        <div class="product-body"><div class="product-top"><h3>Dalgona Coffee</h3><span class="price">Rp18.000</span></div><p>Kopi creamy dengan foam lembut dan rasa manis yang pas.</p></div>
+      </article>
+      <article class="product">
+        <div class="product-art americano"><span class="spark s1">✳</span><div class="drink"></div><span class="spark s2">✦</span></div>
+        <div class="product-body"><div class="product-top"><h3>Americano</h3><span class="price">Rp15.000</span></div><p>Kopi hitam dengan karakter bold, clean, dan menyegarkan.</p></div>
+      </article>
+      <article class="product">
+        <div class="product-art toast"><span class="spark s1">✳</span><div class="toast-plate"><div class="toast-piece"></div></div><span class="spark s2">✦</span></div>
+        <div class="product-body"><div class="product-top"><h3>Lava Toast</h3><span class="price">Rp20.000</span></div><p>Toast renyah di luar dengan isian cokelat lumer di dalam.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="order-section" id="pesan">
+  <div class="wrap order-layout">
+    <div class="order-intro">
+      <div class="eyebrow">Siap menemani harimu</div>
+      <h2>Pesan favoritmu,<br>langsung lewat WhatsApp.</h2>
+      <p>Punya pilihan kopi atau Lava Toast yang kamu mau? Klik tombol di bawah untuk membuka WhatsApp Lava Brew, lalu tulis pesananmu sendiri. Simpel, praktis, tanpa formulir yang ribet.</p>
+      <div class="steps">
+        <div class="step"><div class="step-num">1</div><span>Klik tombol “Pesan Sekarang”.</span></div>
+        <div class="step"><div class="step-num">2</div><span>WhatsApp akan terbuka langsung ke Lava Brew.</span></div>
+        <div class="step"><div class="step-num">3</div><span>Tulis menu, jumlah, dan catatan pesananmu sendiri.</span></div>
+      </div>
+      <div style="margin-top:25px">
+        <a class="btn" href="https://wa.me/6281384830620" target="_blank" rel="noopener noreferrer">Pesan Sekarang via WhatsApp <span>↗</span></a>
+      </div>
+    </div>
+    <div class="order-box" style="text-align:center;padding:34px 26px">
+      <div style="font-size:42px;margin-bottom:12px" aria-hidden="true">☕</div>
+      <h3>Ngobrol langsung dengan kami.</h3>
+      <p style="color:var(--muted);font-size:14px">Tidak perlu mengisi form atau menghitung keranjang. Cukup kirim pesan WhatsApp dan tulis pesanan sesuai keinginanmu.</p>
+      <a class="btn submit" href="https://wa.me/6281384830620" target="_blank" rel="noopener noreferrer">Buka WhatsApp <span>↗</span></a>
+      <p class="smallprint">WhatsApp: 6281384830620</p>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap footer-inner"><div><div class="footer-brand">lava<span>.</span>brew</div><p>Kopi, toast, dan waktu untuk bernapas.</p></div><a class="footer-link" href="https://wa.me/6281384830620" target="_blank" rel="noopener">Hubungi kami di WhatsApp ↗</a><p>© <span id="year"></span> Lava Brew. Dibuat dengan ☕</p></div></footer>
+<div class="toast-msg" id="toastMsg" role="status"></div>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
